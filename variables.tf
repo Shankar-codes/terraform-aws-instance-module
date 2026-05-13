@@ -6,8 +6,8 @@ variable "instance_type" {
   type        = string
   description = "The instance type for the EC2 instance."
   validation {
-    condition     = contains(["t2.micro", "t2.small", "t2.medium"], var.instance_type)
-    error_message = "Invalid instance type. Allowed values are: t2.micro, t2.small, t2.medium."
+    condition     = contains(["t3.micro", "t3.small", "t3.medium"], var.instance_type)
+    error_message = "Invalid instance type. Allowed values are: t3.micro, t3.small, t3.medium."
   }
 }
 
